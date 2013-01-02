@@ -1,0 +1,8 @@
+Package: yape
+Version: 0.1-1
+Section: base
+Priority: optional
+Architecture: all
+Depends: python python-pymongo python-yaml python-argparse
+Maintainer: David Wahlstrom <david.wahlstrom@gmail.com>
+Description: MongoDB driven external node classifier (ENC) for puppet.
