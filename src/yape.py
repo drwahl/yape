@@ -26,6 +26,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import sys
 import logging
+import os
+from pymongo import Connection
+from ConfigParser import SafeConfigParser
+
 
 logging.basicConfig(level=logging.WARN,
                     format='%(asctime)s %(levelname)s - %(message)s',
@@ -72,10 +76,6 @@ class Node(object):
     def configure(self):
         """Read configuration file and intialize connection to the mongodb instance"""
         log.debug('in Node().configure')
-
-        from pymongo import Connection
-        import os
-        from ConfigParser import SafeConfigParser
 
         parser = SafeConfigParser()
         if os.path.isfile('/etc/yape/conf.ini'):
